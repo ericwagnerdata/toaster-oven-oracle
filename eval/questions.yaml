@@ -1,0 +1,36 @@
+# Gold-standard Q/A pairs for evaluating the RAG pipeline.
+#
+# Each item has:
+#   question         - the user's question
+#   expected_pages   - page(s) in the manual that contain the answer; retrieval
+#                      should surface at least one of these in top-k
+#   must_contain     - substrings the generated answer should include
+#                      (case-insensitive). Use short, unambiguous fragments.
+#
+# Start small (5-10). Add a new pair any time the app surprises you in real use.
+
+- question: "What's the preset temperature for cookies?"
+  expected_pages: [11, 24]
+  must_contain: ["325"]
+
+- question: "What rack position should I use for pizza?"
+  expected_pages: [11, 20]
+  must_contain: ["7"]
+
+- question: "How do I clean the crumb tray?"
+  expected_pages: [28]
+  must_contain: ["soapy", "sponge"]
+
+- question: "What is the preset temperature for air fry?"
+  expected_pages: [11]
+  must_contain: ["400"]
+
+- question: "What does the REHEAT function do?"
+  expected_pages: [23]
+  must_contain: ["leftover"]
+
+# Adversarial / out-of-domain: app should refuse, not guess.
+- question: "What is the meaning of life?"
+  expected_pages: []
+  must_contain: ["cannot", "manual"]
+  should_refuse: true

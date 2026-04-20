@@ -1,0 +1,9 @@
+pypdf==5.1.0
+langchain-text-splitters==0.3.2
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0.post1
+numpy==1.26.4
+anthropic==0.40.0
+streamlit==1.41.0
+python-dotenv==1.0.1
+pyyaml==6.0.2
