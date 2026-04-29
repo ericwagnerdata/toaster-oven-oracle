@@ -2,7 +2,7 @@
 
 A local RAG over the Breville BOV900 instruction manual. Ask cooking questions, get answers grounded in the manual with page citations.
 
-![The Oracle of BOV900](web/assets/Toaster%20Oven%20Oracle.png)
+![The Oracle of BOV900](web/assets/oracle-altar.png)
 
 ## What this is
 
